@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/icone.png" type="image/x-icon">
+  <title>Rodrigues Contabilidade</title>
   <style type="text/tailwindcss">
+    html{
+      scroll-behavior: smooth;
+    }
     @theme {
       --color-clifford: #da373d;
     }
@@ -22,6 +27,11 @@
       background: linear-gradient(87deg, #36990F 6.82%, #081902 102.99%);
       font-weight: bolder;
       font-family: 'inter';
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .bt-especialista:hover{
+      transform: scale(1.06);
     }
 
     .vasco {
@@ -72,14 +82,14 @@ footer .line-footer{
   <title>Document</title>
 </head>
 <body class="bg-[#CFCFCF]">
-  <header class="lg:p-[5%] p-[8%] bg-[url('images/image-top.jpg')] bg-no-repeat w-full bg-cover text-white bg-center lg:bg-left">
+  <header class="lg:p-[5%] p-[8%] bg-[url('images/image-top.jpg')] bg-no-repeat w-full bg-cover text-white bg-center lg:bg-left" id="inicio">
     <nav class="flex justify-between items-center">
       <img src="images/logo-rodrigues.jpg" alt="Logomarca Rodrigues Contabilidade" width="130">
       <ul class="lg:flex items-center justify-center gap-[27px] text-[1.6em] font-semibold hidden lg:visible">
-        <a href="#Sobre Nós">
-          <li class="hover:scale-105 hover:cursor-pointer transition">Sobre Nós</li>
+        <a href="#inicio">
+          <li class="hover:scale-105 hover:cursor-pointer transition">Início</li>
         </a>
-        <a href="#Beneficios">
+        <a href="#beneficios">
           <li class="hover:scale-105 hover:cursor-pointer transition">Benefícios</li>
         </a>
         <a href="#orcamento">
@@ -97,9 +107,9 @@ footer .line-footer{
   
         <nav>
             <ul>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Benefícios</a></li>
-                <li><a href="#">Orçamento Gratuito</a></li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#orcamento">Orçamento Gratuito</a></li>
             </ul>
         </nav>
   
@@ -118,7 +128,9 @@ footer .line-footer{
         Oferecemos soluções contábeis personalizadas, garantindo conformidade fiscal e ajudando sua empresa a crescer de forma estratégica. 
         Fale conosco e descubra como podemos ajudar!
       </p>
-      <button class="bt-especialista"><p class="text-[15px] lg:text-[20px]">Fale com um Especialista!</p></button>
+      <button class="bt-especialista"><a href="#orcamento">
+        <p class="text-[15px] lg:text-[20px]">Fale com um Especialista!</p>
+      </a></button>
     </div>
   </header>
 
@@ -130,92 +142,94 @@ footer .line-footer{
           <strong class="text-[#050D75] font-black text-[1.2em]">com ZERO BUROCRACIA!</strong>
         </h1>
         <div class="inline-flex flex-wrap justify-center gap-[40px]">
-          <div class="flex flex-col bg-white items-center py-[20px] gap-[20px] px-[40px] text-center max-w-[300px] rounded-[20px] drop-shadow-2xl">
+          <div class="flex flex-col bg-white items-center py-[20px] gap-[20px] px-[40px] text-center max-w-[300px] rounded-[20px] shadow-[-3px_4px_16.7px_0px_rgba(0,0,0,1)]">
             <p class="px-6 text-white vasco bg-[#050D75] text-[60px] rounded-[22px]">1</p>
             <p class="w-full text-[24px] font-extrabold">Solicite seu Orçamento Gratuito</p>
           </div>
-          <div class="flex flex-col bg-white items-center py-[20px] gap-[20px] px-[40px] text-center max-w-[300px] rounded-[20px] drop-shadow-2xl">
+          <div class="flex flex-col bg-white items-center py-[20px] gap-[20px] px-[40px] text-center max-w-[300px] rounded-[20px] shadow-[-3px_4px_16.7px_0px_rgba(0,0,0,1)]">
             <p class="px-6 text-white vasco bg-[#050D75] text-[60px] rounded-[22px]">2</p>
             <p class="w-full text-[24px] font-extrabold">Encontro com Consultora Contábil Especializada</p>
           </div>
-          <div class="flex flex-col bg-white items-center py-[20px] gap-[20px] px-[40px] text-center max-w-[300px] rounded-[20px] drop-shadow-2xl">
-            <p class="px-6 text-white vasco bg-[#050D75] text-[60px] rounded-[22px]">3</p>
+          <div class="flex flex-col bg-white items-center py-[20px] gap-[20px] px-[40px] text-center max-w-[300px] rounded-[20px] shadow-[-3px_4px_16.7px_0px_rgba(0,0,0,1)]">
+            <p class="px-6 text-white vasco bg-[#050D75] text-[60px] rounded-[22px] ">3</p>
             <p class="w-full text-[24px] font-extrabold">Segurança e Conformidade para Sua Empresa</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mt-20 p-[5%]">
+    <section class="mt-20 p-[5%]" id="orcamento">
       <div class="flex justify-center w-full flex-wrap items-center lg:items-start ">
         <div class="flex flex-col gap-8 lg:gap-10 justify-center items-center lg:items-start lg:justify-normal">
           <h1 class="lg:text-[2.5em] text-[1.9em] font-bold lg:w-[600px] w-[370px] text-center lg:text-left">Solicite Agora seu <strong class="font-black">Orçamento Gratuito</strong> na <strong class="text-[#050D75] font-extrabold">Rodrigues Assessoria Contábil</strong></h1>
           <h2 class="lg:text-[1.5em] text-[1.2em] lg:w-[500px] w-[350px] font-bold text-center lg:text-left">Preencha o formulário para receber seu Orçamento Gratuito e resolva os problemas contábeis do seu negócio</h2>
         </div>
-        <form action="" class="flex flex-col gap-4 max-w-[400px] mx-auto mt-8 items-center">
+        <form action="" class="flex flex-col gap-4 max-w-[400px] mx-auto mt-8 items-center" id="meuFormulario">
           <div class="flex flex-col gap-1">
             <label for="name"><p>Nome:</p></label>
-            <input type="text" class="h-11 w-[338px] border rounded-lg px-lg:4 lg:w-[30vw]" id="name">
+            <input type="text" class="h-11 w-[338px] border rounded-lg px-lg:4 lg:w-[30vw] px-4 outline-none" id="name" required autocomplete="none">
           </div>
+        
           <div class="flex flex-col gap-1">
-            <label for="tel"><p>Telefone:</p></label>
-            <input type="tel" class="h-11 lg:w-[30vw] border rounded-lg px-4 w-[338px]" id="tel">
-          </div>
-          <div class="flex flex-col gap-1">
-            <label for="email"><p>E-mail:</p></label>
-            <input type="email" class="h-11 lg:w-[30vw] border rounded-lg px-4 w-[338px]" id="email">
-          </div>
-          <div class="flex flex-col gap-1">
-            <label for="opcoes" class="font-semibold"><p>O que você precisa?</p></label>
-            <select id="opcoes" name="opcoes" class="border rounded-lg font-bold h-11 lg:w-[30vw] px-4 w-[338px]">
+            <label for="servico" class="font-semibold"><p>O que você precisa?</p></label>
+            <select id="servico" name="servico" class="border rounded-lg font-bold h-11 lg:w-[30vw] px-4 w-[338px] outline-none" required>
               <option value="" disabled selected>Escolha a opção...</option>
-              <option value="abertura">Abertura de Empresa</option>
-              <option value="imposto">Imposto de Renda</option>
-              <option value="consultoria">Consultoria Contábil</option>
-              <option value="outros">Outros</option>
+              <option value="Abrir de Empresa">Abrir uma empresa</option>
+              <option value="Trocar de contabilidade">Trocar de contabilidade</option>
+              <option value="Consultoria Contábil">Consultoria Contábil</option>
+              <option value="Outro">Outro</option>
             </select>
           </div>
+        
           <div class="flex flex-col gap-1">
-            <label for="opcoes" class="font-semibold"><p>O que você precisa?</p></label>
-            <select id="opcoes" name="opcoes" class="border rounded-lg font-bold h-11 lg:w-[30vw] px-4 w-[338px]">
+            <label for="regime" class="font-semibold"><p>Qual o regime tributário atual?</p></label>
+            <select id="regime" name="regime" class="border rounded-lg font-bold h-11 lg:w-[30vw] px-4 w-[338px] outline-none" required>
               <option value="" disabled selected>Escolha a opção...</option>
-              <option value="abertura">Abertura de Empresa</option>
-              <option value="imposto">Imposto de Renda</option>
-              <option value="consultoria">Consultoria Contábil</option>
-              <option value="outros">Outros</option>
+              <option value="Simples Nacional">Simples Nacional</option>
+              <option value="Lucro Presumido">Lucro Presumido</option>
+              <option value="Lucro Real">Lucro Real</option>
             </select>
           </div>
+        
           <div class="flex flex-col gap-1">
-            <label for="opcoes" class="font-semibold"><p>O que você precisa?</p></label>
-            <select id="opcoes" name="opcoes" class="border rounded-lg font-bold h-11 lg:w-[30vw] px-4 w-[338px]">
+            <label for="area" class="font-semibold"><p>Qual a área de atuação da empresa?</p></label>
+            <select id="area" name="area" class="border rounded-lg font-bold h-11 lg:w-[30vw] px-4 w-[338px] outline-none" required>
               <option value="" disabled selected>Escolha a opção...</option>
-              <option value="abertura">Abertura de Empresa</option>
-              <option value="imposto">Imposto de Renda</option>
-              <option value="consultoria">Consultoria Contábil</option>
-              <option value="outros">Outros</option>
+              <option value="Programação/TI">Programação/TI</option>
+              <option value="Advocacia">Advocacia</option>
+              <option value="Medicina">Medicina</option>
+              <option value="Odontologia">Odontologia</option>
+              <option value="Psicologia">Psicologia</option>
+              <option value="Outros serviços da Área da Saúde">Outros serviços da Área da Saúde</option>
+              <option value="Engenharia/Arquitetura">Engenharia/Arquitetura</option>
+              <option value="Construção Civil">Construção Civil</option>
+              <option value="Marketing/Publicidade">Marketing/Publicidade</option>
+              <option value="Restaurante/Lancheria/Ramo da Alimentação">Restaurante/Lancheria/Ramo da Alimentação</option>
+              <option value="Comércio">Comércio</option>
+              <option value="PJ em uma empresa">PJ em uma empresa</option>
+              <option value="Representação Comercial">Representação Comercial</option>
+              <option value="Serviços Administrativos">Serviços Administrativos</option>
+              <option value="Outro">Outro Segmento</option>
             </select>
           </div>
+        
           <div class="flex flex-col gap-1">
-            <label for="opcoes" class="font-semibold"><p>O que você precisa?</p></label>
-            <select id="opcoes" name="opcoes" class="border rounded-lg font-bold h-11 lg:w-[30vw] px-4 w-[338px]">
+            <label for="faturamento" class="font-semibold"><p>Qual a média de faturamento mensal?</p></label>
+            <select id="faturamento" name="faturamento" class="border rounded-lg font-bold h-11 lg:w-[30vw] px-4 w-[338px] outline-none" required>
               <option value="" disabled selected>Escolha a opção...</option>
-              <option value="abertura">Abertura de Empresa</option>
-              <option value="imposto">Imposto de Renda</option>
-              <option value="consultoria">Consultoria Contábil</option>
-              <option value="outros">Outros</option>
+              <option value="Até R$10 mil">Até R$10 mil</option>
+              <option value="De R$11 mil até R$20 mil">De R$11 mil até R$20 mil</option>
+              <option value="De R$21 mil até R$30 mil">De R$21 mil até R$30 mil</option>
+              <option value="De R$31 mil até R$50 mil">De R$31 mil até R$50 mil</option>
+              <option value="De R$51 mil até R$100 mil">De R$51 mil até R$100 mil</option>
+              <option value="De R$101 mil até R$200 mil">De R$101 mil até R$200 mil</option>
+              <option value="Acima de R$201 mil">Acima de R$201 mil</option>
             </select>
           </div>
-          <div class="flex flex-col gap-1">
-            <label for="opcoes" class="font-semibold"><p>O que você precisa?</p></label>
-            <select id="opcoes" name="opcoes" class="border rounded-lg font-bold h-11 lg:w-[30vw] px-4 w-[338px]">
-              <option value="" disabled selected>Escolha a opção...</option>
-              <option value="abertura">Abertura de Empresa</option>
-              <option value="imposto">Imposto de Renda</option>
-              <option value="consultoria">Consultoria Contábil</option>
-              <option value="outros">Outros</option>
-            </select>
-          </div>
-          <button class="bg-[#050D75] text-white px-8 py-3 rounded-lg font-bold mt-6"><p class="text-[1.1em]">Enviar</p></button>
+        
+          <button type="submit" class="bg-[#050D75] text-white px-8 py-3 rounded-lg font-bold mt-6">
+            <p class="text-[1.1em]">Enviar</p>
+          </button>
         </form>
       </div>
     </section>
@@ -227,28 +241,30 @@ footer .line-footer{
           <h1 class="text-[2em]  font-bold text-center">Solicite Agora um Orçamento Gratuito para <strong class="text-[#050D75]">Migrar sua Contabilidade</strong></h1>
             <ul class="space-y-6 text-gray-800 flex flex-col items-center justify-center">
               <li class="flex items-center gap-2">
-                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Sem Complicação na Migração Contábil</p>
+                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Sem Complicação na Migração Contábil;</p>
               </li>
               <li class="flex items-center gap-2">
-                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Análise Completa da Sua Gestão Financeira</p>
+                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Análise Completa da Sua Gestão Financeira;</p>
               </li>
               <li class="flex items-center gap-2">
-                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Anos de Experiência para Impulsionar Seu Sucesso</p>
+                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Anos de Experiência para Impulsionar Seu Sucesso;</p>
               </li>
               <li class="flex items-center gap-2">
-                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Eficiência e Qualidade na Execução Contábil</p>
+                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Eficiência e Qualidade na Execução Contábil;</p>
               </li>
               <li class="flex items-center gap-2">
-                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Melhor Custo-Benefício do Mercado</p>
+                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Melhor Custo-Benefício do Mercado;</p>
               </li>
               <li class="flex items-center gap-2">
-                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Atendimento Rápido e Personalizado</p>
+                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Atendimento Rápido e Personalizado;</p>
               </li>
               <li class="flex items-center gap-2">
-                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Planejamento Tributário Inteligente para Sua Empresa</p>
+                  <p class="text-[1.4em] lg:w-[600px] w-[350px] font-semibold leading-[1.5rem] flex items-center"><i class="bi bi-check text-[#050D75] text-[1.7em]"></i> Planejamento Tributário Inteligente para Sua Empresa.</p>
               </li>
           </ul>
-          <button class="bt-especialista"><p class="text-white text-[18px] lg:text-[20px]">Fale com um Especialista!</p></button>
+          <button class="bt-especialista"><a href="#orcamento">
+            <p class="text-white text-[18px] lg:text-[20px]">Fale com um Especialista!</p>
+          </a></button>
         </div>
       </div>
     </section>
@@ -264,35 +280,39 @@ footer .line-footer{
           <source src="images/feedback-1.mp4" type="video/mp4" class="lg:w-[396px] lg:h-[650px]">
         </video>
       </div> 
-      <button class="bt-especialista m-auto mt-6"><p class="text-[18px]">Fale com um Especialista!</p></button>
+      <button class="bt-especialista m-auto mt-6"><a href="#orcamento">
+        <p class="text-[18px]">Fale com um Especialista!</p>
+      </a></button>
     </section>
 
     <section class="mt-8 mb-8 p-[5%] lg:block flex justify-center items-center flex-col">
       <h1 class="font-extrabold text-[1.9em] lg:text-[2.8em] text-center w-[300px] lg:w-[auto]">O que sua empresa ganha ao escolher <br>uma nova <strong class="font-black uppercase text-[#050D75]">solução contábil</strong>?</h1>
       <div class="flex lg:justify-between mt-16 flex-wrap items-center justify-center gap-20">
-        <div class="flex flex-col justify-center items-center gap-[48px] py-[44px] px-[29px] text-white bg-black max-w-[300px] rounded-3xl">
+        <div class="flex flex-col justify-center items-center gap-[48px] py-[44px] px-[29px] text-white bg-black max-w-[300px] rounded-3xl border-4 border-[#E8EAED] shadow-[4px_2px_49px_0px_#222]">
           <svg xmlns="http://www.w3.org/2000/svg" width="85" height="84" viewBox="0 0 85 84" fill="none">
             <path d="M32 84C28.0333 84 24.6111 82.6194 21.7333 79.8583C18.8556 77.0972 17.2222 73.7722 16.8333 69.8833C12.1667 69.2611 8.27778 67.2 5.16667 63.7C2.05556 60.2 0.5 56.0778 0.5 51.3333C0.5 49.7 0.713889 48.0861 1.14167 46.4917C1.56944 44.8972 2.21111 43.4 3.06667 42C2.21111 40.6 1.56944 39.1222 1.14167 37.5667C0.713889 36.0111 0.5 34.3778 0.5 32.6667C0.5 27.9222 2.05556 23.8194 5.16667 20.3583C8.27778 16.8972 12.1278 14.8556 16.7167 14.2333C16.95 10.2667 18.5444 6.90278 21.5 4.14167C24.4556 1.38056 27.9556 0 32 0C34.0222 0 35.9083 0.388889 37.6583 1.16667C39.4083 1.94444 41.0222 2.99444 42.5 4.31667C43.9 2.99444 45.4944 1.94444 47.2833 1.16667C49.0722 0.388889 50.9778 0 53 0C57.0444 0 60.525 1.36111 63.4417 4.08333C66.3583 6.80556 67.9333 10.15 68.1667 14.1167C72.7556 14.7389 76.625 16.8 79.775 20.3C82.925 23.8 84.5 27.9222 84.5 32.6667C84.5 34.3778 84.2861 36.0111 83.8583 37.5667C83.4306 39.1222 82.7889 40.6 81.9333 42C82.7889 43.4 83.4306 44.8972 83.8583 46.4917C84.2861 48.0861 84.5 49.7 84.5 51.3333C84.5 56.1556 82.925 60.2972 79.775 63.7583C76.625 67.2194 72.7167 69.2611 68.05 69.8833C67.6611 73.7722 66.0472 77.0972 63.2083 79.8583C60.3694 82.6194 56.9667 84 53 84C51.0556 84 49.1694 83.6306 47.3417 82.8917C45.5139 82.1528 43.9 81.1222 42.5 79.8C41.0222 81.1222 39.3889 82.1528 37.6 82.8917C35.8111 83.6306 33.9444 84 32 84ZM47.1667 15.1667V68.8333C47.1667 70.4667 47.7306 71.8472 48.8583 72.975C49.9861 74.1028 51.3667 74.6667 53 74.6667C54.5556 74.6667 55.8972 74.0444 57.025 72.8C58.1528 71.5556 58.7556 70.1556 58.8333 68.6C57.2 67.9778 55.7028 67.1417 54.3417 66.0917C52.9806 65.0417 51.7556 63.7778 50.6667 62.3C49.8889 61.2111 49.5972 60.0444 49.7917 58.8C49.9861 57.5556 50.6278 56.5444 51.7167 55.7667C52.8056 54.9889 53.9722 54.6972 55.2167 54.8917C56.4611 55.0861 57.4722 55.7278 58.25 56.8167C59.1056 58.0611 60.1944 59.0139 61.5167 59.675C62.8389 60.3361 64.2778 60.6667 65.8333 60.6667C68.4 60.6667 70.5972 59.7528 72.425 57.925C74.2528 56.0972 75.1667 53.9 75.1667 51.3333C75.1667 50.9444 75.1472 50.5556 75.1083 50.1667C75.0694 49.7778 74.9722 49.3889 74.8167 49C73.4944 49.7778 72.075 50.3611 70.5583 50.75C69.0417 51.1389 67.4667 51.3333 65.8333 51.3333C64.5111 51.3333 63.4028 50.8861 62.5083 49.9917C61.6139 49.0972 61.1667 47.9889 61.1667 46.6667C61.1667 45.3444 61.6139 44.2361 62.5083 43.3417C63.4028 42.4472 64.5111 42 65.8333 42C68.4 42 70.5972 41.0861 72.425 39.2583C74.2528 37.4306 75.1667 35.2333 75.1667 32.6667C75.1667 30.1 74.2528 27.9222 72.425 26.1333C70.5972 24.3444 68.4 23.4111 65.8333 23.3333C64.9778 24.7333 63.8694 25.9583 62.5083 27.0083C61.1472 28.0583 59.65 28.8944 58.0167 29.5167C56.7722 29.9833 55.5667 29.9444 54.4 29.4C53.2333 28.8556 52.4556 27.9611 52.0667 26.7167C51.6778 25.4722 51.7361 24.2667 52.2417 23.1C52.7472 21.9333 53.6222 21.1556 54.8667 20.7667C56.0333 20.3778 56.9861 19.6778 57.725 18.6667C58.4639 17.6556 58.8333 16.4889 58.8333 15.1667C58.8333 13.5333 58.2694 12.1528 57.1417 11.025C56.0139 9.89722 54.6333 9.33333 53 9.33333C51.3667 9.33333 49.9861 9.89722 48.8583 11.025C47.7306 12.1528 47.1667 13.5333 47.1667 15.1667ZM37.8333 68.8333V15.1667C37.8333 13.5333 37.2694 12.1528 36.1417 11.025C35.0139 9.89722 33.6333 9.33333 32 9.33333C30.3667 9.33333 28.9861 9.89722 27.8583 11.025C26.7306 12.1528 26.1667 13.5333 26.1667 15.1667C26.1667 16.4111 26.5167 17.5583 27.2167 18.6083C27.9167 19.6583 28.85 20.3778 30.0167 20.7667C31.2611 21.1556 32.1556 21.9333 32.7 23.1C33.2444 24.2667 33.3222 25.4722 32.9333 26.7167C32.4667 27.9611 31.65 28.8556 30.4833 29.4C29.3167 29.9444 28.1111 29.9833 26.8667 29.5167C25.2333 28.8944 23.7361 28.0583 22.375 27.0083C21.0139 25.9583 19.9056 24.7333 19.05 23.3333C16.5611 23.4111 14.4028 24.3639 12.575 26.1917C10.7472 28.0194 9.83333 30.1778 9.83333 32.6667C9.83333 35.2333 10.7472 37.4306 12.575 39.2583C14.4028 41.0861 16.6 42 19.1667 42C20.4889 42 21.5972 42.4472 22.4917 43.3417C23.3861 44.2361 23.8333 45.3444 23.8333 46.6667C23.8333 47.9889 23.3861 49.0972 22.4917 49.9917C21.5972 50.8861 20.4889 51.3333 19.1667 51.3333C17.5333 51.3333 15.9583 51.1389 14.4417 50.75C12.925 50.3611 11.5056 49.7778 10.1833 49C10.0278 49.3889 9.93056 49.7778 9.89167 50.1667C9.85278 50.5556 9.83333 50.9444 9.83333 51.3333C9.83333 53.9 10.7472 56.0972 12.575 57.925C14.4028 59.7528 16.6 60.6667 19.1667 60.6667C20.7222 60.6667 22.1611 60.3361 23.4833 59.675C24.8056 59.0139 25.8944 58.0611 26.75 56.8167C27.5278 55.7278 28.5389 55.0861 29.7833 54.8917C31.0278 54.6972 32.1944 54.9889 33.2833 55.7667C34.3722 56.5444 35.0139 57.5556 35.2083 58.8C35.4028 60.0444 35.1111 61.2111 34.3333 62.3C33.2444 63.7778 32 65.0611 30.6 66.15C29.2 67.2389 27.6833 68.0944 26.05 68.7167C26.1278 70.2722 26.75 71.6528 27.9167 72.8583C29.0833 74.0639 30.4444 74.6667 32 74.6667C33.6333 74.6667 35.0139 74.1028 36.1417 72.975C37.2694 71.8472 37.8333 70.4667 37.8333 68.8333Z" fill="#E8EAED"/>
           </svg>
           <h2 class="text-[1.5em] font-bold text-center">Entrega dentro dos  <br>Prazos</h2>
           <p class="w-[230px] font-semibold text-lg">Prezamos e realizamos todas as entregas dentro dos prazos, evitando multas e problemas fiscais</p>
-          <button class="bt-especialista m-auto py-[15px] px-[35px] text-white"><p>Fale Conosco!</p></button>
+          <button class="bt-especialista m-auto py-[15px] px-[35px] text-white"><a href="#orcamento">
+            <p>Fale Conosco!</p>
+          </a></button>
         </div>
-        <div class="flex flex-col justify-center items-center gap-[48px] py-[44px] px-[29px] text-white bg-black max-w-[300px] rounded-3xl">
+        <div class="flex flex-col justify-center items-center gap-[48px] py-[44px] px-[29px] text-white bg-black max-w-[300px] rounded-3xl border-4 border-[#E8EAED] shadow-[4px_2px_49px_0px_#222]">
           <svg xmlns="http://www.w3.org/2000/svg" width="85" height="84" viewBox="0 0 85 84" fill="none">
             <path d="M32 84C28.0333 84 24.6111 82.6194 21.7333 79.8583C18.8556 77.0972 17.2222 73.7722 16.8333 69.8833C12.1667 69.2611 8.27778 67.2 5.16667 63.7C2.05556 60.2 0.5 56.0778 0.5 51.3333C0.5 49.7 0.713889 48.0861 1.14167 46.4917C1.56944 44.8972 2.21111 43.4 3.06667 42C2.21111 40.6 1.56944 39.1222 1.14167 37.5667C0.713889 36.0111 0.5 34.3778 0.5 32.6667C0.5 27.9222 2.05556 23.8194 5.16667 20.3583C8.27778 16.8972 12.1278 14.8556 16.7167 14.2333C16.95 10.2667 18.5444 6.90278 21.5 4.14167C24.4556 1.38056 27.9556 0 32 0C34.0222 0 35.9083 0.388889 37.6583 1.16667C39.4083 1.94444 41.0222 2.99444 42.5 4.31667C43.9 2.99444 45.4944 1.94444 47.2833 1.16667C49.0722 0.388889 50.9778 0 53 0C57.0444 0 60.525 1.36111 63.4417 4.08333C66.3583 6.80556 67.9333 10.15 68.1667 14.1167C72.7556 14.7389 76.625 16.8 79.775 20.3C82.925 23.8 84.5 27.9222 84.5 32.6667C84.5 34.3778 84.2861 36.0111 83.8583 37.5667C83.4306 39.1222 82.7889 40.6 81.9333 42C82.7889 43.4 83.4306 44.8972 83.8583 46.4917C84.2861 48.0861 84.5 49.7 84.5 51.3333C84.5 56.1556 82.925 60.2972 79.775 63.7583C76.625 67.2194 72.7167 69.2611 68.05 69.8833C67.6611 73.7722 66.0472 77.0972 63.2083 79.8583C60.3694 82.6194 56.9667 84 53 84C51.0556 84 49.1694 83.6306 47.3417 82.8917C45.5139 82.1528 43.9 81.1222 42.5 79.8C41.0222 81.1222 39.3889 82.1528 37.6 82.8917C35.8111 83.6306 33.9444 84 32 84ZM47.1667 15.1667V68.8333C47.1667 70.4667 47.7306 71.8472 48.8583 72.975C49.9861 74.1028 51.3667 74.6667 53 74.6667C54.5556 74.6667 55.8972 74.0444 57.025 72.8C58.1528 71.5556 58.7556 70.1556 58.8333 68.6C57.2 67.9778 55.7028 67.1417 54.3417 66.0917C52.9806 65.0417 51.7556 63.7778 50.6667 62.3C49.8889 61.2111 49.5972 60.0444 49.7917 58.8C49.9861 57.5556 50.6278 56.5444 51.7167 55.7667C52.8056 54.9889 53.9722 54.6972 55.2167 54.8917C56.4611 55.0861 57.4722 55.7278 58.25 56.8167C59.1056 58.0611 60.1944 59.0139 61.5167 59.675C62.8389 60.3361 64.2778 60.6667 65.8333 60.6667C68.4 60.6667 70.5972 59.7528 72.425 57.925C74.2528 56.0972 75.1667 53.9 75.1667 51.3333C75.1667 50.9444 75.1472 50.5556 75.1083 50.1667C75.0694 49.7778 74.9722 49.3889 74.8167 49C73.4944 49.7778 72.075 50.3611 70.5583 50.75C69.0417 51.1389 67.4667 51.3333 65.8333 51.3333C64.5111 51.3333 63.4028 50.8861 62.5083 49.9917C61.6139 49.0972 61.1667 47.9889 61.1667 46.6667C61.1667 45.3444 61.6139 44.2361 62.5083 43.3417C63.4028 42.4472 64.5111 42 65.8333 42C68.4 42 70.5972 41.0861 72.425 39.2583C74.2528 37.4306 75.1667 35.2333 75.1667 32.6667C75.1667 30.1 74.2528 27.9222 72.425 26.1333C70.5972 24.3444 68.4 23.4111 65.8333 23.3333C64.9778 24.7333 63.8694 25.9583 62.5083 27.0083C61.1472 28.0583 59.65 28.8944 58.0167 29.5167C56.7722 29.9833 55.5667 29.9444 54.4 29.4C53.2333 28.8556 52.4556 27.9611 52.0667 26.7167C51.6778 25.4722 51.7361 24.2667 52.2417 23.1C52.7472 21.9333 53.6222 21.1556 54.8667 20.7667C56.0333 20.3778 56.9861 19.6778 57.725 18.6667C58.4639 17.6556 58.8333 16.4889 58.8333 15.1667C58.8333 13.5333 58.2694 12.1528 57.1417 11.025C56.0139 9.89722 54.6333 9.33333 53 9.33333C51.3667 9.33333 49.9861 9.89722 48.8583 11.025C47.7306 12.1528 47.1667 13.5333 47.1667 15.1667ZM37.8333 68.8333V15.1667C37.8333 13.5333 37.2694 12.1528 36.1417 11.025C35.0139 9.89722 33.6333 9.33333 32 9.33333C30.3667 9.33333 28.9861 9.89722 27.8583 11.025C26.7306 12.1528 26.1667 13.5333 26.1667 15.1667C26.1667 16.4111 26.5167 17.5583 27.2167 18.6083C27.9167 19.6583 28.85 20.3778 30.0167 20.7667C31.2611 21.1556 32.1556 21.9333 32.7 23.1C33.2444 24.2667 33.3222 25.4722 32.9333 26.7167C32.4667 27.9611 31.65 28.8556 30.4833 29.4C29.3167 29.9444 28.1111 29.9833 26.8667 29.5167C25.2333 28.8944 23.7361 28.0583 22.375 27.0083C21.0139 25.9583 19.9056 24.7333 19.05 23.3333C16.5611 23.4111 14.4028 24.3639 12.575 26.1917C10.7472 28.0194 9.83333 30.1778 9.83333 32.6667C9.83333 35.2333 10.7472 37.4306 12.575 39.2583C14.4028 41.0861 16.6 42 19.1667 42C20.4889 42 21.5972 42.4472 22.4917 43.3417C23.3861 44.2361 23.8333 45.3444 23.8333 46.6667C23.8333 47.9889 23.3861 49.0972 22.4917 49.9917C21.5972 50.8861 20.4889 51.3333 19.1667 51.3333C17.5333 51.3333 15.9583 51.1389 14.4417 50.75C12.925 50.3611 11.5056 49.7778 10.1833 49C10.0278 49.3889 9.93056 49.7778 9.89167 50.1667C9.85278 50.5556 9.83333 50.9444 9.83333 51.3333C9.83333 53.9 10.7472 56.0972 12.575 57.925C14.4028 59.7528 16.6 60.6667 19.1667 60.6667C20.7222 60.6667 22.1611 60.3361 23.4833 59.675C24.8056 59.0139 25.8944 58.0611 26.75 56.8167C27.5278 55.7278 28.5389 55.0861 29.7833 54.8917C31.0278 54.6972 32.1944 54.9889 33.2833 55.7667C34.3722 56.5444 35.0139 57.5556 35.2083 58.8C35.4028 60.0444 35.1111 61.2111 34.3333 62.3C33.2444 63.7778 32 65.0611 30.6 66.15C29.2 67.2389 27.6833 68.0944 26.05 68.7167C26.1278 70.2722 26.75 71.6528 27.9167 72.8583C29.0833 74.0639 30.4444 74.6667 32 74.6667C33.6333 74.6667 35.0139 74.1028 36.1417 72.975C37.2694 71.8472 37.8333 70.4667 37.8333 68.8333Z" fill="#E8EAED"/>
           </svg>
           <h2 class="text-[1.5em] font-bold text-center">Serviços de Acordo <br>com seu momento </h2>
           <p class="w-[230px] font-semibold text-lg">Serviços contábeis ajustados de acordo com as necessidades de cada momento da sua empresa </p>
-          <button class="bt-especialista m-auto py-[15px] px-[35px] text-white"><p>Fale Conosco!</p></button>
+          <a href="#orcamento"><button class="bt-especialista m-auto py-[15px] px-[35px] text-white"><p>Fale Conosco!</p></button></a>
         </div>
-        <div class="flex flex-col justify-center items-center gap-[48px] py-[44px] px-[29px] text-white bg-black max-w-[300px] rounded-3xl">
+        <div class="flex flex-col justify-center items-center gap-[48px] py-[44px] px-[29px] text-white bg-black max-w-[300px] rounded-3xl border-4 border-[#E8EAED] shadow-[4px_2px_49px_0px_#222]">
           <svg xmlns="http://www.w3.org/2000/svg" width="85" height="84" viewBox="0 0 85 84" fill="none">
             <path d="M32 84C28.0333 84 24.6111 82.6194 21.7333 79.8583C18.8556 77.0972 17.2222 73.7722 16.8333 69.8833C12.1667 69.2611 8.27778 67.2 5.16667 63.7C2.05556 60.2 0.5 56.0778 0.5 51.3333C0.5 49.7 0.713889 48.0861 1.14167 46.4917C1.56944 44.8972 2.21111 43.4 3.06667 42C2.21111 40.6 1.56944 39.1222 1.14167 37.5667C0.713889 36.0111 0.5 34.3778 0.5 32.6667C0.5 27.9222 2.05556 23.8194 5.16667 20.3583C8.27778 16.8972 12.1278 14.8556 16.7167 14.2333C16.95 10.2667 18.5444 6.90278 21.5 4.14167C24.4556 1.38056 27.9556 0 32 0C34.0222 0 35.9083 0.388889 37.6583 1.16667C39.4083 1.94444 41.0222 2.99444 42.5 4.31667C43.9 2.99444 45.4944 1.94444 47.2833 1.16667C49.0722 0.388889 50.9778 0 53 0C57.0444 0 60.525 1.36111 63.4417 4.08333C66.3583 6.80556 67.9333 10.15 68.1667 14.1167C72.7556 14.7389 76.625 16.8 79.775 20.3C82.925 23.8 84.5 27.9222 84.5 32.6667C84.5 34.3778 84.2861 36.0111 83.8583 37.5667C83.4306 39.1222 82.7889 40.6 81.9333 42C82.7889 43.4 83.4306 44.8972 83.8583 46.4917C84.2861 48.0861 84.5 49.7 84.5 51.3333C84.5 56.1556 82.925 60.2972 79.775 63.7583C76.625 67.2194 72.7167 69.2611 68.05 69.8833C67.6611 73.7722 66.0472 77.0972 63.2083 79.8583C60.3694 82.6194 56.9667 84 53 84C51.0556 84 49.1694 83.6306 47.3417 82.8917C45.5139 82.1528 43.9 81.1222 42.5 79.8C41.0222 81.1222 39.3889 82.1528 37.6 82.8917C35.8111 83.6306 33.9444 84 32 84ZM47.1667 15.1667V68.8333C47.1667 70.4667 47.7306 71.8472 48.8583 72.975C49.9861 74.1028 51.3667 74.6667 53 74.6667C54.5556 74.6667 55.8972 74.0444 57.025 72.8C58.1528 71.5556 58.7556 70.1556 58.8333 68.6C57.2 67.9778 55.7028 67.1417 54.3417 66.0917C52.9806 65.0417 51.7556 63.7778 50.6667 62.3C49.8889 61.2111 49.5972 60.0444 49.7917 58.8C49.9861 57.5556 50.6278 56.5444 51.7167 55.7667C52.8056 54.9889 53.9722 54.6972 55.2167 54.8917C56.4611 55.0861 57.4722 55.7278 58.25 56.8167C59.1056 58.0611 60.1944 59.0139 61.5167 59.675C62.8389 60.3361 64.2778 60.6667 65.8333 60.6667C68.4 60.6667 70.5972 59.7528 72.425 57.925C74.2528 56.0972 75.1667 53.9 75.1667 51.3333C75.1667 50.9444 75.1472 50.5556 75.1083 50.1667C75.0694 49.7778 74.9722 49.3889 74.8167 49C73.4944 49.7778 72.075 50.3611 70.5583 50.75C69.0417 51.1389 67.4667 51.3333 65.8333 51.3333C64.5111 51.3333 63.4028 50.8861 62.5083 49.9917C61.6139 49.0972 61.1667 47.9889 61.1667 46.6667C61.1667 45.3444 61.6139 44.2361 62.5083 43.3417C63.4028 42.4472 64.5111 42 65.8333 42C68.4 42 70.5972 41.0861 72.425 39.2583C74.2528 37.4306 75.1667 35.2333 75.1667 32.6667C75.1667 30.1 74.2528 27.9222 72.425 26.1333C70.5972 24.3444 68.4 23.4111 65.8333 23.3333C64.9778 24.7333 63.8694 25.9583 62.5083 27.0083C61.1472 28.0583 59.65 28.8944 58.0167 29.5167C56.7722 29.9833 55.5667 29.9444 54.4 29.4C53.2333 28.8556 52.4556 27.9611 52.0667 26.7167C51.6778 25.4722 51.7361 24.2667 52.2417 23.1C52.7472 21.9333 53.6222 21.1556 54.8667 20.7667C56.0333 20.3778 56.9861 19.6778 57.725 18.6667C58.4639 17.6556 58.8333 16.4889 58.8333 15.1667C58.8333 13.5333 58.2694 12.1528 57.1417 11.025C56.0139 9.89722 54.6333 9.33333 53 9.33333C51.3667 9.33333 49.9861 9.89722 48.8583 11.025C47.7306 12.1528 47.1667 13.5333 47.1667 15.1667ZM37.8333 68.8333V15.1667C37.8333 13.5333 37.2694 12.1528 36.1417 11.025C35.0139 9.89722 33.6333 9.33333 32 9.33333C30.3667 9.33333 28.9861 9.89722 27.8583 11.025C26.7306 12.1528 26.1667 13.5333 26.1667 15.1667C26.1667 16.4111 26.5167 17.5583 27.2167 18.6083C27.9167 19.6583 28.85 20.3778 30.0167 20.7667C31.2611 21.1556 32.1556 21.9333 32.7 23.1C33.2444 24.2667 33.3222 25.4722 32.9333 26.7167C32.4667 27.9611 31.65 28.8556 30.4833 29.4C29.3167 29.9444 28.1111 29.9833 26.8667 29.5167C25.2333 28.8944 23.7361 28.0583 22.375 27.0083C21.0139 25.9583 19.9056 24.7333 19.05 23.3333C16.5611 23.4111 14.4028 24.3639 12.575 26.1917C10.7472 28.0194 9.83333 30.1778 9.83333 32.6667C9.83333 35.2333 10.7472 37.4306 12.575 39.2583C14.4028 41.0861 16.6 42 19.1667 42C20.4889 42 21.5972 42.4472 22.4917 43.3417C23.3861 44.2361 23.8333 45.3444 23.8333 46.6667C23.8333 47.9889 23.3861 49.0972 22.4917 49.9917C21.5972 50.8861 20.4889 51.3333 19.1667 51.3333C17.5333 51.3333 15.9583 51.1389 14.4417 50.75C12.925 50.3611 11.5056 49.7778 10.1833 49C10.0278 49.3889 9.93056 49.7778 9.89167 50.1667C9.85278 50.5556 9.83333 50.9444 9.83333 51.3333C9.83333 53.9 10.7472 56.0972 12.575 57.925C14.4028 59.7528 16.6 60.6667 19.1667 60.6667C20.7222 60.6667 22.1611 60.3361 23.4833 59.675C24.8056 59.0139 25.8944 58.0611 26.75 56.8167C27.5278 55.7278 28.5389 55.0861 29.7833 54.8917C31.0278 54.6972 32.1944 54.9889 33.2833 55.7667C34.3722 56.5444 35.0139 57.5556 35.2083 58.8C35.4028 60.0444 35.1111 61.2111 34.3333 62.3C33.2444 63.7778 32 65.0611 30.6 66.15C29.2 67.2389 27.6833 68.0944 26.05 68.7167C26.1278 70.2722 26.75 71.6528 27.9167 72.8583C29.0833 74.0639 30.4444 74.6667 32 74.6667C33.6333 74.6667 35.0139 74.1028 36.1417 72.975C37.2694 71.8472 37.8333 70.4667 37.8333 68.8333Z" fill="#E8EAED"/>
           </svg>
           <h2 class="text-[1.5em] font-bold text-center">Atendimento Ágil <br>e Humanizado</h2>
           <p class="w-[230px] font-semibold text-lg">Sempre que precisar, estaremos disponíveis para lhe atender, de forma rápida e precisa. </p>
-          <button class="bt-especialista m-auto py-[15px] px-[35px] text-white"><p>Fale Conosco!</p></button>
+          <button class="bt-especialista m-auto py-[15px] px-[35px] text-white"><p><a href="#orcamento">Fale Conosco!</a></p></button>
         </div>
       </div>
     </section>
@@ -305,9 +325,9 @@ footer .line-footer{
             </div> <!--Logo Footer--> 
             <div class="container-footer text-center">
                 <h2 class="text-2xl">Contato</h2>
-                <p><i class="bi bi-whatsapp"></i><a href="#" target="_blank"> (77) 98831-8661</a></p>
-                <p><i class="bi bi-whatsapp"></i><a href="#" target="_blank">  (77) 98844-9348 </a></p>
-                <p><i class="bi bi-instagram"></i><a href="#" target="_blank"> 
+                <p><i class="bi bi-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=5577988318661" target="_blank">(77) 98831-8661</a></p>
+                <p><i class="bi bi-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=557798844-9348" target="_blank">(77) 98844-9348</a></p>
+                <p><i class="bi bi-instagram"></i> <a href="https://www.instagram.com/rodrigues.assessoriacontabil/?__pwa=1" target="_blank"> 
                   @rodrigues.assessoriacontabil</a></p>
             </div>
 
