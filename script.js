@@ -23,7 +23,7 @@ overlay.addEventListener('click', ()=> {
     let area = document.getElementById("area").value;
     let faturamento = document.getElementById("faturamento").value;
 
-    let mensagem = `Olá, eu sou "${nome}", preciso de "${servico}", a área de atuação da minha empresa é "${area}", meu regime tributário atual é "${regime}" e a minha média de faturamento é "${faturamento}".`;
+    let mensagem = `Olá, eu sou "${nome}", preciso "${servico}", a área de atuação da minha empresa é "${area}", meu regime tributário atual é "${regime}" e a minha média de faturamento é "${faturamento}".`;
 
     let numeroWhatsApp = "77988318661";
     let link = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
